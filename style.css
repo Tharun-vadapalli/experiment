@@ -1,0 +1,2567 @@
+/* =========================================================
+   DHV BOOKS & ACCESSORIES
+   PREMIUM BLACK + GOLD THEME
+   DARK / LIGHT MODE READY
+   ========================================================= */
+
+/* =========================================================
+   1. ROOT VARIABLES
+   ========================================================= */
+
+:root {
+    --bg: #050505;
+    --bg-soft: #0b0b0b;
+    --surface: #111111;
+    --surface-2: #181818;
+    --surface-3: #202020;
+
+    --text: #ffffff;
+    --text-soft: #d0d0d0;
+    --muted: #9b9b9b;
+
+    --primary: #f5b942;
+    --primary-dark: #d99a00;
+    --secondary: #ff7a18;
+    --secondary-dark: #e85d04;
+
+    --border: rgba(255, 255, 255, 0.09);
+    --border-strong: rgba(245, 185, 66, 0.35);
+
+    --shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+    --shadow-hover: 0 25px 60px rgba(0, 0, 0, 0.5);
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+
+    --container: 1200px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   LIGHT MODE
+   ========================================================= */
+
+html.light-mode {
+    --bg: #f7f7f5;
+    --bg-soft: #eeeeeb;
+    --surface: #ffffff;
+    --surface-2: #f1f1ee;
+    --surface-3: #e6e6e1;
+
+    --text: #111111;
+    --text-soft: #333333;
+    --muted: #666666;
+
+    --primary: #d99a00;
+    --primary-dark: #b97e00;
+    --secondary: #e85d04;
+    --secondary-dark: #c94d00;
+
+    --border: rgba(0, 0, 0, 0.09);
+    --border-strong: rgba(217, 154, 0, 0.35);
+
+    --shadow: 0 15px 40px rgba(0, 0, 0, 0.10);
+    --shadow-hover: 0 25px 55px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================================
+   2. GLOBAL RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+::selection {
+    background: var(--primary);
+    color: #000;
+}
+
+
+/* =========================================================
+   3. CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(92%, var(--container));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   4. TOP BAR
+   ========================================================= */
+
+.top-bar {
+    background: #000000;
+    color: #ffffff;
+
+    padding: 9px 0;
+
+    font-size: 13px;
+}
+
+.top-bar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.top-bar-left,
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.top-bar a {
+    transition: var(--transition);
+}
+
+.top-bar a:hover {
+    color: var(--primary);
+}
+
+.top-bar i {
+    color: var(--primary);
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   5. HEADER / NAVIGATION
+   ========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: color-mix(
+        in srgb,
+        var(--surface) 94%,
+        transparent
+    );
+
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(15px);
+
+    transition:
+        background-color 0.35s ease,
+        box-shadow 0.3s ease;
+}
+
+.header-scrolled {
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.20);
+}
+
+.navbar {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-weight: 900;
+    font-size: 21px;
+
+    letter-spacing: -0.5px;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: #000;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(245, 185, 66, 0.20);
+}
+
+.logo-text span {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   NAV LINKS
+   ========================================================= */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.main-nav a {
+    position: relative;
+
+    padding: 10px 12px;
+
+    color: var(--text-soft);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    border-radius: 9px;
+
+    transition: var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--primary);
+    background: rgba(245, 185, 66, 0.08);
+}
+
+.main-nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 12px;
+    right: 12px;
+    bottom: 4px;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: var(--surface-2);
+    color: var(--text);
+
+    font-size: 22px;
+
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   6. THEME TOGGLE
+   ========================================================= */
+
+.theme-toggle {
+    width: 48px;
+    height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: var(--surface-2);
+    color: var(--primary);
+
+    font-size: 19px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.05);
+
+    background: var(--primary);
+    border-color: var(--primary);
+
+    color: #000;
+}
+
+.theme-toggle:active {
+    transform: scale(0.94);
+}
+
+
+/* =========================================================
+   7. HERO SECTION
+   ========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(245, 185, 66, 0.15),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(255, 122, 24, 0.10),
+            transparent 30%
+        ),
+        var(--bg);
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    top: -180px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(245, 185, 66, 0.16);
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    left: -170px;
+    bottom: -180px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 122, 24, 0.13);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 58%;
+}
+
+.hero h1 {
+    max-width: 800px;
+
+    font-size: clamp(44px, 6vw, 76px);
+
+    line-height: 1.02;
+
+    letter-spacing: -3px;
+
+    font-weight: 950;
+
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-size: 18px;
+
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.hero-image {
+    position: absolute;
+
+    right: 4%;
+    top: 50%;
+
+    width: 40%;
+    max-width: 560px;
+
+    transform: translateY(-50%);
+
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+
+    border-radius: var(--radius-xl);
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45);
+
+    object-fit: cover;
+}
+
+.hero-badge {
+    position: absolute;
+
+    left: -35px;
+    bottom: 35px;
+
+    padding: 15px 18px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border-strong);
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+    font-weight: 800;
+}
+
+.hero-badge strong {
+    display: block;
+    color: var(--primary);
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   8. BUTTONS
+   ========================================================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 48px;
+
+    padding: 12px 21px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #000;
+
+    box-shadow:
+        0 10px 25px rgba(245, 185, 66, 0.20);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+
+    box-shadow:
+        0 15px 35px rgba(245, 185, 66, 0.30);
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: #fff;
+
+    box-shadow:
+        0 10px 25px rgba(255, 122, 24, 0.18);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-dark);
+}
+
+.btn-outline {
+    background: transparent;
+
+    color: var(--text);
+
+    border: 1px solid var(--border-strong);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+
+    color: #000;
+}
+
+.btn-dark {
+    background: #000;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background: #222;
+}
+
+
+/* =========================================================
+   9. SECTION COMMON
+   ========================================================= */
+
+.section {
+    padding: 90px 0;
+}
+
+.section-dark {
+    background: #080808;
+}
+
+.section-header {
+    max-width: 700px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.section-kicker {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-size: clamp(30px, 4vw, 48px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: var(--muted);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   10. CATEGORY CARDS
+   ========================================================= */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.category-card {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 270px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    border-radius: var(--radius-lg);
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--border-strong);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.category-card img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.48;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.08);
+
+    opacity: 0.60;
+}
+
+.category-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.10)
+        );
+}
+
+.category-content {
+    position: relative;
+    z-index: 2;
+}
+
+.category-icon {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 13px;
+
+    background: var(--primary);
+    color: #000;
+
+    font-size: 19px;
+}
+
+.category-card h3 {
+    color: #fff;
+
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+.category-card p {
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   11. PRODUCT GRID
+   ========================================================= */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.product-card {
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--border-strong);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+    position: relative;
+
+    height: 230px;
+
+    overflow: hidden;
+
+    background: var(--surface-2);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.45s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.07);
+}
+
+.product-content {
+    padding: 20px;
+}
+
+.product-content h3 {
+    font-size: 18px;
+
+    margin-bottom: 7px;
+}
+
+.product-content p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.product-price {
+    color: var(--primary);
+
+    font-weight: 900;
+
+    margin-bottom: 14px;
+}
+
+
+/* =========================================================
+   12. PRODUCT FILTERS
+   ========================================================= */
+
+.product-filters,
+.gallery-filter {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-bottom: 35px;
+}
+
+.filter-btn,
+.gallery-filter-btn {
+    padding: 10px 17px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    background: var(--surface);
+
+    color: var(--text-soft);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active,
+.gallery-filter-btn:hover,
+.gallery-filter-btn.active {
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: #000;
+}
+
+
+/* =========================================================
+   13. PAGE HERO
+   ========================================================= */
+
+.page-hero {
+    position: relative;
+
+    padding: 105px 0 95px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(245, 185, 66, 0.14),
+            transparent 30%
+        ),
+        var(--bg);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.page-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -100px;
+    bottom: -150px;
+
+    border: 1px solid rgba(245, 185, 66, 0.18);
+
+    border-radius: 50%;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+}
+
+.page-hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 16px;
+}
+
+.page-hero h1 span {
+    color: var(--primary);
+}
+
+.page-hero p {
+    color: var(--muted);
+
+    max-width: 650px;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   14. TWO COLUMN LAYOUT
+   ========================================================= */
+
+.two-column {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+.two-column.reverse {
+    direction: rtl;
+}
+
+.two-column.reverse > * {
+    direction: ltr;
+}
+
+
+/* =========================================================
+   15. IMAGE CARD
+   ========================================================= */
+
+.image-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-xl);
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+.image-card img {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+}
+
+.image-card-badge {
+    position: absolute;
+
+    left: 20px;
+    bottom: 20px;
+
+    padding: 12px 17px;
+
+    background: rgba(0, 0, 0, 0.82);
+
+    color: #fff;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(8px);
+
+    font-weight: 800;
+}
+
+.image-card-badge strong {
+    display: block;
+
+    color: var(--primary);
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   16. CHECK LIST
+   ========================================================= */
+
+.check-list {
+    display: grid;
+
+    gap: 13px;
+
+    margin: 25px 0;
+}
+
+.check-list li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    color: var(--text-soft);
+}
+
+.check-list li::before {
+    content: "âœ“";
+
+    flex-shrink: 0;
+
+    width: 23px;
+    height: 23px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: #000;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   17. SCHOOL BANNER
+   ========================================================= */
+
+.school-banner {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 65px 0;
+
+    background:
+        linear-gradient(
+            110deg,
+            #000000,
+            #16110a
+        );
+
+    color: #fff;
+}
+
+.school-banner::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -150px;
+    top: -200px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(245, 185, 66, 0.20);
+}
+
+.school-banner-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.school-banner h2 {
+    font-size: clamp(28px, 4vw, 42px);
+
+    margin-bottom: 8px;
+}
+
+.school-banner p {
+    color: rgba(255, 255, 255, 0.68);
+
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   18. STEPS
+   ========================================================= */
+
+.steps-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.step-card {
+    position: relative;
+
+    padding: 30px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    transition: var(--transition);
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--border-strong);
+
+    box-shadow: var(--shadow);
+}
+
+.step-number {
+    position: absolute;
+
+    right: 20px;
+    top: 20px;
+
+    color: var(--primary);
+
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.step-icon {
+    width: 55px;
+    height: 55px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 16px;
+
+    background: rgba(245, 185, 66, 0.12);
+
+    color: var(--primary);
+
+    font-size: 23px;
+}
+
+.step-card h3 {
+    margin-bottom: 8px;
+}
+
+.step-card p {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   19. FEATURE GRID
+   ========================================================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 28px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--border-strong);
+
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    width: 52px;
+    height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+
+    background: rgba(245, 185, 66, 0.12);
+
+    color: var(--primary);
+
+    font-size: 21px;
+}
+
+.feature-icon.orange {
+    background: rgba(255, 122, 24, 0.12);
+    color: var(--secondary);
+}
+
+.feature-icon.green {
+    background: rgba(65, 180, 110, 0.12);
+    color: #45b86f;
+}
+
+.feature-card h3 {
+    margin-bottom: 7px;
+}
+
+.feature-card p {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   20. TEXT LINK
+   ========================================================= */
+
+.text-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 12px;
+
+    color: var(--primary);
+
+    font-weight: 800;
+
+    transition: var(--transition);
+}
+
+.text-link:hover {
+    gap: 11px;
+
+    color: var(--secondary);
+}
+
+
+/* =========================================================
+   21. CONTACT PAGE
+   ========================================================= */
+
+.contact-layout {
+    display: grid;
+
+    grid-template-columns:
+        0.85fr 1.15fr;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+.contact-details {
+    display: grid;
+
+    gap: 18px;
+}
+
+.contact-info-list {
+    display: grid;
+
+    gap: 14px;
+}
+
+.contact-info-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 17px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    transition: var(--transition);
+}
+
+.contact-info-item:hover {
+    border-color: var(--border-strong);
+
+    transform: translateX(4px);
+}
+
+.contact-info-icon {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: rgba(245, 185, 66, 0.12);
+
+    color: var(--primary);
+}
+
+.contact-info-item h4 {
+    margin-bottom: 2px;
+}
+
+.contact-info-item p,
+.contact-info-item a {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.contact-info-item a:hover {
+    color: var(--primary);
+}
+
+.contact-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   22. WHATSAPP BUTTON
+   ========================================================= */
+
+.btn-whatsapp {
+    background: #25d366;
+
+    color: #fff;
+
+    box-shadow:
+        0 10px 25px rgba(37, 211, 102, 0.16);
+}
+
+.btn-whatsapp:hover {
+    background: #1db954;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   23. CONTACT FORM
+   ========================================================= */
+
+.contact-form-card {
+    padding: 32px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow);
+}
+
+.contact-form-card h2 {
+    margin-bottom: 8px;
+}
+
+.contact-form-card > p {
+    color: var(--muted);
+
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper i {
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--muted);
+
+    pointer-events: none;
+}
+
+.form-control,
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    padding: 13px 14px;
+
+    background: var(--surface-2);
+
+    color: var(--text);
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: var(--transition);
+}
+
+.input-wrapper input {
+    padding-left: 43px;
+}
+
+.form-group textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+.form-control::placeholder,
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--muted);
+}
+
+.form-control:focus,
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(245, 185, 66, 0.10);
+}
+
+.form-submit {
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+.form-note {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   24. MAP
+   ========================================================= */
+
+.map-card {
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow);
+}
+
+.map-card iframe {
+    display: block;
+
+    width: 100%;
+
+    min-height: 390px;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   25. GALLERY
+   ========================================================= */
+
+.gallery-feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.4fr 0.8fr;
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+.gallery-feature {
+    position: relative;
+
+    min-height: 280px;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-lg);
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+}
+
+.gallery-feature.large {
+    grid-row: span 2;
+
+    min-height: 580px;
+}
+
+.gallery-feature img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.gallery-feature:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-overlay {
+    position: absolute;
+
+    inset: auto 0 0 0;
+
+    padding: 45px 25px 24px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.88)
+        );
+
+    color: #fff;
+}
+
+.gallery-overlay h3 {
+    font-size: 22px;
+
+    margin-bottom: 3px;
+}
+
+.gallery-overlay p {
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   GALLERY GRID
+   ========================================================= */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.gallery-item {
+    overflow: hidden;
+
+    border-radius: var(--radius-md);
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--border-strong);
+
+    box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-item-info {
+    padding: 15px 17px;
+}
+
+.gallery-item-info h3 {
+    font-size: 16px;
+
+    margin-bottom: 3px;
+}
+
+.gallery-item-info p {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   26. CTA SECTION
+   ========================================================= */
+
+.cta-section {
+    padding: 80px 0;
+}
+
+.cta-box {
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 55px;
+
+    border-radius: var(--radius-xl);
+
+    background:
+        linear-gradient(
+            125deg,
+            #000000,
+            #19130a
+        );
+
+    color: #fff;
+
+    border: 1px solid rgba(245, 185, 66, 0.18);
+
+    box-shadow: var(--shadow);
+}
+
+.cta-box::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -100px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(245, 185, 66, 0.18);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-content h2 {
+    font-size: clamp(28px, 4vw, 44px);
+
+    line-height: 1.1;
+
+    margin-bottom: 10px;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.68);
+
+    max-width: 650px;
+}
+
+.cta-buttons {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.btn-white {
+    background: #fff;
+
+    color: #000;
+}
+
+.btn-white:hover {
+    background: #eeeeee;
+}
+
+.btn-yellow {
+    background: var(--primary);
+
+    color: #000;
+}
+
+.btn-yellow:hover {
+    background: var(--primary-dark);
+}
+
+
+/* =========================================================
+   27. FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: #000000;
+
+    color: #fff;
+
+    padding-top: 65px;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr 1fr;
+
+    gap: 35px;
+
+    padding-bottom: 45px;
+}
+
+.footer-brand p {
+    max-width: 330px;
+
+    color: #999;
+
+    font-size: 14px;
+
+    margin: 18px 0;
+}
+
+.footer-title {
+    margin-bottom: 17px;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 900;
+}
+
+.footer-links {
+    display: grid;
+
+    gap: 9px;
+}
+
+.footer-links a {
+    color: #999;
+
+    font-size: 13px;
+
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+
+    transform: translateX(3px);
+}
+
+.footer-social {
+    display: flex;
+
+    gap: 9px;
+}
+
+.footer-social a {
+    width: 39px;
+    height: 39px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: #151515;
+
+    color: #aaa;
+
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--primary);
+
+    color: #000;
+
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    padding: 18px 0;
+
+    border-top: 1px solid #1d1d1d;
+
+    color: #777;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   28. FLOATING WHATSAPP
+   ========================================================= */
+
+.whatsapp-float {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 56px;
+    height: 56px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #25d366;
+
+    color: #fff;
+
+    font-size: 25px;
+
+    z-index: 999;
+
+    box-shadow:
+        0 12px 35px rgba(37, 211, 102, 0.28);
+
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+
+    background: #1db954;
+}
+
+
+/* =========================================================
+   29. BACK TO TOP
+   ========================================================= */
+
+#backToTop {
+    position: fixed;
+
+    right: 22px;
+    bottom: 95px;
+
+    width: 43px;
+    height: 43px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-size: 19px;
+
+    font-weight: 900;
+
+    z-index: 999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow);
+}
+
+#backToTop.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: #000;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   30. SCROLL REVEAL
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   31. UTILITY
+   ========================================================= */
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-muted {
+    color: var(--muted);
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   32. IMAGE FALLBACK
+   ========================================================= */
+
+img {
+    background-color: var(--surface-2);
+}
+
+
+/* =========================================================
+   33. RESPONSIVE â€” TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .main-nav {
+        gap: 2px;
+    }
+
+    .main-nav a {
+        padding: 9px 8px;
+
+        font-size: 13px;
+    }
+
+    .category-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   34. RESPONSIVE â€” 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: auto;
+
+        padding: 80px 0;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-image {
+        position: relative;
+
+        right: auto;
+        top: auto;
+
+        width: 100%;
+        max-width: 650px;
+
+        margin: 45px auto 0;
+
+        transform: none;
+    }
+
+    .hero-badge {
+        left: 15px;
+        bottom: 15px;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-feature.large {
+        min-height: 400px;
+
+        grid-row: auto;
+    }
+
+    .cta-box,
+    .school-banner-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   35. RESPONSIVE â€” MOBILE NAV
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-nav {
+        position: absolute;
+
+        left: 4%;
+        right: 4%;
+        top: calc(100% + 8px);
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 10px;
+
+        background: var(--surface);
+
+        border: 1px solid var(--border);
+
+        border-radius: 16px;
+
+        box-shadow: var(--shadow-hover);
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav a {
+        width: 100%;
+
+        padding: 13px 14px;
+    }
+
+    .main-nav a.active::after {
+        display: none;
+    }
+
+    .theme-toggle {
+        width: 42px;
+        height: 42px;
+
+        font-size: 17px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .steps-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   36. RESPONSIVE â€” 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .top-bar {
+        display: none;
+    }
+
+    .container {
+        width: min(91%, var(--container));
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons,
+    .cta-buttons,
+    .contact-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn,
+    .cta-buttons .btn,
+    .contact-buttons .btn {
+        width: 100%;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-feature.large {
+        min-height: 300px;
+    }
+
+    .school-banner {
+        padding: 50px 0;
+    }
+
+    .cta-box {
+        padding: 35px 25px;
+    }
+
+    .contact-form-card {
+        padding: 23px;
+    }
+
+    .map-card iframe {
+        min-height: 300px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    #backToTop {
+        right: 17px;
+        bottom: 88px;
+    }
+
+    .whatsapp-float {
+        right: 17px;
+        bottom: 17px;
+    }
+}
+
+
+/* =========================================================
+   37. RESPONSIVE â€” SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .logo-icon {
+        width: 39px;
+        height: 39px;
+
+        font-size: 17px;
+    }
+
+    .theme-toggle {
+        width: 39px;
+        height: 39px;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+
+    .category-card {
+        min-height: 240px;
+    }
+}
+
+
+/* =========================================================
+   38. ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(245, 185, 66, 0.35);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   39. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   40. DARK MODE â€” EXTRA POLISH
+   ========================================================= */
+
+html:not(.light-mode) .site-header {
+    background: rgba(5, 5, 5, 0.92);
+}
+
+html:not(.light-mode) .product-card,
+html:not(.light-mode) .feature-card,
+html:not(.light-mode) .step-card,
+html:not(.light-mode) .contact-form-card {
+    background:
+        linear-gradient(
+            145deg,
+            #111111,
+            #0c0c0c
+        );
+}
+
+
+/* =========================================================
+   41. LIGHT MODE â€” EXTRA POLISH
+   ========================================================= */
+
+html.light-mode .site-header {
+    background: rgba(255, 255, 255, 0.92);
+}
+
+html.light-mode .category-card::after {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.08)
+        );
+}
+
+html.light-mode .hero {
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(217, 154, 0, 0.12),
+            transparent 28%
+        ),
+        var(--bg);
+}
+
+
+/* =========================================================
+   END OF DHV BOOKS & ACCESSORIES STYLES
+   ========================================================= */
