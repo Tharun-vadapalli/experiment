@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Browse books, uniforms, stationery, accessories, art supplies and school essentials at DHV Books & Accessories."
+    >
+
+    <meta
+        name="theme-color"
+        content="#050505"
+    >
+
+    <title>
+        Products | DHV Books & Accessories
+    </title>
+
+    <!-- ICONS -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- STYLES -->
+
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
+    <!-- Prevent theme flash -->
+
+    <script>
+        (function () {
+
+            const savedTheme =
+                localStorage.getItem("dhv-theme");
+
+            if (savedTheme === "light") {
+
+                document.documentElement.classList.add(
+                    "light-mode"
+                );
+
+            }
+
+        })();
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         TOP BAR
+         ===================================================== -->
+
+    <div class="top-bar">
+
+        <div class="container top-bar-inner">
+
+            <div class="top-bar-left">
+
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Eluru, Andhra Pradesh
+                </span>
+
+                <a href="tel:9347592976">
+                    <i class="fa-solid fa-phone"></i>
+                    93475 92976
+                </a>
+
+            </div>
+
+            <div class="top-bar-right">
+
+                <span>
+                    <i class="fa-solid fa-school"></i>
+                    Books • Uniforms • Stationery
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </span>
+
+                <span class="logo-text">
+                    DHV <span>Books</span>
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a
+                    href="products.html"
+                    class="active"
+                >
+                    Products
+                </a>
+
+                <a href="books.html">
+                    Books
+                </a>
+
+                <a href="uniforms.html">
+                    Uniforms
+                </a>
+
+                <a href="stationery.html">
+                    Stationery
+                </a>
+
+                <a href="schools.html">
+                    Schools
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- ACTIONS -->
+
+            <div
+                style="
+                    display:flex;
+                    align-items:center;
+                    gap:8px;
+                "
+            >
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Toggle dark and light mode"
+                    title="Toggle dark and light mode"
+                >
+                    🌙
+                </button>
+
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         PAGE HERO
+         ===================================================== -->
+
+    <section class="page-hero">
+
+        <div class="container">
+
+            <div class="page-hero-content">
+
+                <div class="section-kicker">
+                    DHV COLLECTION
+                </div>
+
+                <h1>
+                    School Products.
+                    <span>All In One Place.</span>
+                </h1>
+
+                <p>
+
+                    Explore our range of books,
+                    uniforms, stationery,
+                    accessories and creative
+                    school essentials.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PRODUCT SECTION
+         ===================================================== -->
+
+    <main>
+
+        <section class="section">
+
+            <div class="container">
+
+
+                <!-- FILTERS -->
+
+                <div class="section-header">
+
+                    <div class="section-kicker">
+                        BROWSE PRODUCTS
+                    </div>
+
+                    <h2 class="section-title">
+                        Find What You Need
+                    </h2>
+
+                    <p class="section-description">
+
+                        Choose a category to quickly
+                        explore the products available
+                        at DHV Books & Accessories.
+
+                    </p>
+
+                </div>
+
+
+                <div class="product-filters">
+
+                    <button
+                        type="button"
+                        class="filter-btn active"
+                        onclick="filterProducts('all', this)"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        onclick="filterProducts('books', this)"
+                    >
+                        Books
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        onclick="filterProducts('uniforms', this)"
+                    >
+                        Uniforms
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        onclick="filterProducts('stationery', this)"
+                    >
+                        Stationery
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        onclick="filterProducts('accessories', this)"
+                    >
+                        Accessories
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        onclick="filterProducts('belts', this)"
+                    >
+                        Belts
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        onclick="filterProducts('ties', this)"
+                    >
+                        Ties
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        onclick="filterProducts('id-cards', this)"
+                    >
+                        ID Cards
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        onclick="filterProducts('boards', this)"
+                    >
+                        Boards
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        onclick="filterProducts('art', this)"
+                    >
+                        Art Supplies
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     PRODUCTS GRID
+                     ================================================= -->
+
+                <div class="product-grid">
+
+
+                    <!-- BOOK 1 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="books"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+                                alt="School textbooks"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                School Textbooks
+                            </h3>
+
+                            <p>
+                                Textbooks and academic
+                                learning materials for
+                                different classes.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('School Textbooks')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BOOK 2 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="books"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=800&q=80"
+                                alt="School notebooks"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Class Notebooks
+                            </h3>
+
+                            <p>
+                                Ruled, unruled and subject
+                                notebooks for daily schoolwork.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Class Notebooks')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BOOK 3 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="books"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80"
+                                alt="Workbooks and guides"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Workbooks & Guides
+                            </h3>
+
+                            <p>
+                                Practice books, guides and
+                                supplementary study materials.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Workbooks and Guides')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- UNIFORM 1 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="uniforms"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1622445275576-721325763afe?auto=format&fit=crop&w=800&q=80"
+                                alt="School shirt"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                School Shirts
+                            </h3>
+
+                            <p>
+                                Everyday school shirts
+                                in standard uniform styles.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('School Shirts')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- UNIFORM 2 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="uniforms"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80"
+                                alt="School uniform"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Complete Uniform Sets
+                            </h3>
+
+                            <p>
+                                Uniform combinations for
+                                regular school days.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Complete School Uniform Sets')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- UNIFORM 3 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="uniforms"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80"
+                                alt="Sports school uniform"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Sports T-Shirts
+                            </h3>
+
+                            <p>
+                                Comfortable sports and
+                                activity wear for students.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Sports T-Shirts')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- STATIONERY 1 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="stationery"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=800&q=80"
+                                alt="Pens"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Pens
+                            </h3>
+
+                            <p>
+                                Everyday writing pens for
+                                school and classroom use.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Pens')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- STATIONERY 2 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="stationery"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=800&q=80"
+                                alt="Pencils and stationery"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Pencils & Erasers
+                            </h3>
+
+                            <p>
+                                Writing basics for
+                                classroom and homework use.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Pencils and Erasers')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- STATIONERY 3 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="stationery"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80"
+                                alt="School stationery notebook"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Highlighters & Markers
+                            </h3>
+
+                            <p>
+                                Useful markers for notes,
+                                projects and presentations.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Highlighters and Markers')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- STATIONERY 4 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="stationery"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80"
+                                alt="School supplies"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Geometry Boxes
+                            </h3>
+
+                            <p>
+                                Mathematical instruments
+                                for school students.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Geometry Boxes')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ACCESSORY 1 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="accessories"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+                                alt="School backpack"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                School Bags
+                            </h3>
+
+                            <p>
+                                Practical backpacks for
+                                everyday school use.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('School Bags')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ACCESSORY 2 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="accessories"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
+                                alt="School accessories"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                School Accessories
+                            </h3>
+
+                            <p>
+                                Useful accessories for
+                                everyday student needs.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('School Accessories')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BELT -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="belts"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?auto=format&fit=crop&w=800&q=80"
+                                alt="School belt"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                School Belts
+                            </h3>
+
+                            <p>
+                                Uniform belts suitable
+                                for everyday school wear.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('School Belts')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- TIE -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="ties"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1598032895397-b9472444bf93?auto=format&fit=crop&w=800&q=80"
+                                alt="School tie"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                School Ties
+                            </h3>
+
+                            <p>
+                                Uniform ties in different
+                                school styles.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('School Ties')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ID CARD -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="id-cards"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=800&q=80"
+                                alt="ID card accessories"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                ID Card Holders
+                            </h3>
+
+                            <p>
+                                Practical ID card holders
+                                and student accessories.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('ID Card Holders')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BOARD -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="boards"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80"
+                                alt="Writing board"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Writing Boards
+                            </h3>
+
+                            <p>
+                                Boards and presentation
+                                materials for school use.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Writing Boards')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ART 1 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="art"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80"
+                                alt="Art supplies"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Colour Pencils
+                            </h3>
+
+                            <p>
+                                Colouring supplies for
+                                art and school projects.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Colour Pencils')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ART 2 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="art"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=800&q=80"
+                                alt="Crayons and colours"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Crayons & Sketch Pens
+                            </h3>
+
+                            <p>
+                                Creative colouring materials
+                                for school activities.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Crayons and Sketch Pens')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ART 3 -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="art"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800&q=80"
+                                alt="Paint and art materials"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Paints & Brushes
+                            </h3>
+
+                            <p>
+                                Art paints and brushes
+                                for creative projects.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Paints and Brushes')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- FILES -->
+
+                    <article
+                        class="product-card reveal"
+                        data-category="stationery"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1455885666463-0b5d8fefb8c8?auto=format&fit=crop&w=800&q=80"
+                                alt="School files and folders"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Files & Folders
+                            </h3>
+
+                            <p>
+                                Organise notes, worksheets
+                                and important school papers.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Files and Folders')"
+                            >
+                                Enquire
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCHOOL BULK CTA
+             ================================================= -->
+
+        <section class="school-banner">
+
+            <div class="container">
+
+                <div class="school-banner-content">
+
+                    <div>
+
+                        <div class="section-kicker">
+                            BULK REQUIREMENTS
+                        </div>
+
+                        <h2>
+                            Need Products For A School?
+                        </h2>
+
+                        <p>
+
+                            Contact us to discuss books,
+                            uniforms, stationery and
+                            other school requirements.
+
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-yellow"
+                        onclick="openWhatsApp(
+                            'Hello DHV Books & Accessories, I would like to enquire about bulk school requirements.'
+                        )"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        WhatsApp Enquiry
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+             ================================================= -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div class="cta-content">
+
+                        <div class="section-kicker">
+                            NEED HELP?
+                        </div>
+
+                        <h2>
+                            Can't Find Something?
+                        </h2>
+
+                        <p>
+
+                            Send us a message and tell us
+                            what you're looking for.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="cta-buttons">
+
+                        <a
+                            href="contact.html"
+                            class="btn btn-white"
+                        >
+
+                            Contact Us
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-yellow"
+                            onclick="openWhatsApp(
+                                'Hello DHV Books & Accessories, I am looking for a school product that is not listed on the website.'
+                            )"
+                        >
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                            Ask on WhatsApp
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="logo"
+                    >
+
+                        <span class="logo-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </span>
+
+                        <span class="logo-text">
+                            DHV <span>Books</span>
+                        </span>
+
+                    </a>
+
+
+                    <p>
+
+                        Your convenient destination
+                        for school books, uniforms,
+                        stationery and accessories.
+
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a
+                            href="https://wa.me/919347592976"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="WhatsApp"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                        <a
+                            href="mailto:dileep.976@gmail.com"
+                            aria-label="Email"
+                        >
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+
+                        <a
+                            href="tel:9347592976"
+                            aria-label="Phone"
+                        >
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Products
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="books.html">
+                            Books
+                        </a>
+
+                        <a href="uniforms.html">
+                            Uniforms
+                        </a>
+
+                        <a href="stationery.html">
+                            Stationery
+                        </a>
+
+                        <a href="products.html">
+                            Accessories
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Explore
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="schools.html">
+                            Schools
+                        </a>
+
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+
+                        <a href="about.html">
+                            About Us
+                        </a>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Contact
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="tel:9347592976">
+                            93475 92976
+                        </a>
+
+                        <a href="mailto:dileep.976@gmail.com">
+                            dileep.976@gmail.com
+                        </a>
+
+                        <span style="color:#999;font-size:13px;">
+                            Beside SaiBalaji Theatre,
+                            Eluru - 534001
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                ©
+                <span id="currentYear">
+                    2026
+                </span>
+
+                DHV Books & Accessories.
+                All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         FLOATING WHATSAPP
+         ===================================================== -->
+
+    <a
+        href="https://wa.me/919347592976"
+        target="_blank"
+        rel="noopener"
+        class="whatsapp-float"
+        aria-label="WhatsApp DHV Books & Accessories"
+        title="WhatsApp"
+    >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

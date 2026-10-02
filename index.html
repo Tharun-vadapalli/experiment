@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="DHV Books & Accessories - School books, uniforms, stationery, bags, art supplies and complete school essentials in Eluru."
+    >
+
+    <meta
+        name="theme-color"
+        content="#050505"
+    >
+
+    <title>
+        DHV Books & Accessories | Everything Your School Needs
+    </title>
+
+    <!-- =====================================================
+         ICONS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- =====================================================
+         WEBSITE STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+    <!-- Prevent theme flash -->
+    <script>
+        (function () {
+            const savedTheme =
+                localStorage.getItem("dhv-theme");
+
+            if (savedTheme === "light") {
+                document.documentElement.classList.add(
+                    "light-mode"
+                );
+            }
+        })();
+    </script>
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         TOP BAR
+         ===================================================== -->
+
+    <div class="top-bar">
+
+        <div class="container top-bar-inner">
+
+            <div class="top-bar-left">
+
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Eluru, Andhra Pradesh
+                </span>
+
+                <a href="tel:9347592976">
+                    <i class="fa-solid fa-phone"></i>
+                    93475 92976
+                </a>
+
+            </div>
+
+
+            <div class="top-bar-right">
+
+                <span>
+                    <i class="fa-solid fa-clock"></i>
+                    School Essentials • Books • Stationery
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="DHV Books & Accessories Home"
+            >
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </span>
+
+                <span class="logo-text">
+                    DHV <span>Books</span>
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav
+                class="main-nav"
+                id="mainNav"
+            >
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="books.html">
+                    Books
+                </a>
+
+                <a href="uniforms.html">
+                    Uniforms
+                </a>
+
+                <a href="stationery.html">
+                    Stationery
+                </a>
+
+                <a href="schools.html">
+                    Schools
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- HEADER ACTIONS -->
+
+            <div
+                style="
+                    display:flex;
+                    align-items:center;
+                    gap:8px;
+                "
+            >
+
+                <!-- THEME TOGGLE -->
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Toggle dark and light mode"
+                    title="Toggle dark and light mode"
+                >
+                    🌙
+                </button>
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div class="section-kicker">
+                        DHV BOOKS & ACCESSORIES
+                    </div>
+
+
+                    <h1>
+
+                        Everything Your
+                        <span>School Needs.</span>
+
+                        All In One Place.
+
+                    </h1>
+
+
+                    <p>
+
+                        Books, uniforms, stationery,
+                        school bags, art supplies and
+                        everyday school essentials —
+                        conveniently available at DHV
+                        Books & Accessories.
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="products.html"
+                            class="btn btn-primary"
+                        >
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                            Explore Products
+
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-whatsapp"
+                            onclick="openWhatsApp(
+                                'Hello DHV Books & Accessories, I would like to know more about your school products.'
+                            )"
+                        >
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                            WhatsApp Us
+
+                        </button>
+
+
+                        <a
+                            href="contact.html"
+                            class="btn btn-outline"
+                        >
+
+                            <i class="fa-solid fa-file-invoice"></i>
+
+                            Request a Quote
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO IMAGE -->
+
+                <div class="hero-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=85"
+                        alt="Students with school books"
+                        loading="eager"
+                    >
+
+
+                    <div class="hero-badge">
+
+                        <strong>
+                            100+
+                        </strong>
+
+                        School Essentials
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CATEGORIES
+             ================================================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-kicker">
+                        SHOP BY CATEGORY
+                    </div>
+
+                    <h2 class="section-title">
+                        Everything Students Need
+                    </h2>
+
+                    <p class="section-description">
+
+                        From the first notebook to
+                        complete school uniforms,
+                        discover everyday essentials
+                        in one convenient place.
+
+                    </p>
+
+                </div>
+
+
+                <div class="category-grid">
+
+
+                    <!-- BOOKS -->
+
+                    <a
+                        href="books.html"
+                        class="category-card reveal"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=900&q=80"
+                            alt="School books"
+                            loading="lazy"
+                        >
+
+                        <div class="category-content">
+
+                            <div class="category-icon">
+
+                                <i class="fa-solid fa-book"></i>
+
+                            </div>
+
+                            <h3>
+                                Books
+                            </h3>
+
+                            <p>
+                                Textbooks, notebooks,
+                                guides and workbooks.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- UNIFORMS -->
+
+                    <a
+                        href="uniforms.html"
+                        class="category-card reveal"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80"
+                            alt="School uniforms"
+                            loading="lazy"
+                        >
+
+                        <div class="category-content">
+
+                            <div class="category-icon">
+
+                                <i class="fa-solid fa-shirt"></i>
+
+                            </div>
+
+                            <h3>
+                                Uniforms
+                            </h3>
+
+                            <p>
+                                Shirts, trousers,
+                                skirts and sportswear.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- STATIONERY -->
+
+                    <a
+                        href="stationery.html"
+                        class="category-card reveal"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=900&q=80"
+                            alt="School stationery"
+                            loading="lazy"
+                        >
+
+                        <div class="category-content">
+
+                            <div class="category-icon">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </div>
+
+                            <h3>
+                                Stationery
+                            </h3>
+
+                            <p>
+                                Pens, pencils, geometry,
+                                files and more.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- ACCESSORIES -->
+
+                    <a
+                        href="products.html"
+                        class="category-card reveal"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80"
+                            alt="School accessories and bags"
+                            loading="lazy"
+                        >
+
+                        <div class="category-content">
+
+                            <div class="category-icon">
+
+                                <i class="fa-solid fa-backpack"></i>
+
+                            </div>
+
+                            <h3>
+                                Accessories
+                            </h3>
+
+                            <p>
+                                Bags, belts, ties,
+                                ID cards and more.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ABOUT / SHOP INTRO
+             ================================================= -->
+
+        <section class="section section-dark">
+
+            <div class="container">
+
+                <div class="two-column">
+
+                    <div class="image-card reveal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=85"
+                            alt="School supplies"
+                            loading="lazy"
+                        >
+
+                        <div class="image-card-badge">
+
+                            <strong>
+                                DHV
+                            </strong>
+
+                            School Essentials
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reveal">
+
+                        <div class="section-kicker">
+                            YOUR SCHOOL SHOP
+                        </div>
+
+                        <h2 class="section-title">
+                            Simple Shopping.
+                            Complete School Solutions.
+                        </h2>
+
+                        <p class="text-muted">
+
+                            DHV Books & Accessories brings
+                            together the products students,
+                            parents and schools need
+                            throughout the academic year.
+
+                        </p>
+
+
+                        <ul class="check-list">
+
+                            <li>
+                                Complete range of school books
+                                and notebooks.
+                            </li>
+
+                            <li>
+                                School uniforms and activity wear.
+                            </li>
+
+                            <li>
+                                Stationery and geometry essentials.
+                            </li>
+
+                            <li>
+                                Art, craft and project materials.
+                            </li>
+
+                            <li>
+                                School bags and useful accessories.
+                            </li>
+
+                            <li>
+                                Bulk and school requirements
+                                can be discussed directly.
+                            </li>
+
+                        </ul>
+
+
+                        <a
+                            href="about.html"
+                            class="btn btn-primary"
+                        >
+
+                            Learn More
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             WHY DHV
+             ================================================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-kicker">
+                        WHY DHV
+                    </div>
+
+                    <h2 class="section-title">
+                        Made For Students & Schools
+                    </h2>
+
+                    <p class="section-description">
+
+                        A convenient place to organise
+                        the essentials needed for school,
+                        study and activities.
+
+                    </p>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+
+                    <div class="feature-card reveal">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                        </div>
+
+                        <h3>
+                            Wide Selection
+                        </h3>
+
+                        <p>
+
+                            Find books, uniforms,
+                            stationery, accessories
+                            and school essentials
+                            under one roof.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card reveal">
+
+                        <div class="feature-icon orange">
+
+                            <i class="fa-solid fa-school"></i>
+
+                        </div>
+
+                        <h3>
+                            School Focused
+                        </h3>
+
+                        <p>
+
+                            Products are organised
+                            around the everyday needs
+                            of students and schools.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card reveal">
+
+                        <div class="feature-icon green">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                        </div>
+
+                        <h3>
+                            Easy Enquiries
+                        </h3>
+
+                        <p>
+
+                            Ask about products,
+                            availability or bulk
+                            requirements through WhatsApp.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card reveal">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-boxes-stacked"></i>
+
+                        </div>
+
+                        <h3>
+                            Bulk Requirements
+                        </h3>
+
+                        <p>
+
+                            Schools and larger groups
+                            can contact us to discuss
+                            their requirements.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card reveal">
+
+                        <div class="feature-icon orange">
+
+                            <i class="fa-solid fa-palette"></i>
+
+                        </div>
+
+                        <h3>
+                            Art & Projects
+                        </h3>
+
+                        <p>
+
+                            Keep project work and
+                            creative activities supplied
+                            with useful materials.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card reveal">
+
+                        <div class="feature-icon green">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+                        <h3>
+                            Convenient
+                        </h3>
+
+                        <p>
+
+                            Browse categories online
+                            and quickly contact the shop
+                            for your requirements.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCHOOL BANNER
+             ================================================= -->
+
+        <section class="school-banner">
+
+            <div class="container">
+
+                <div class="school-banner-content">
+
+                    <div>
+
+                        <div class="section-kicker">
+                            FOR SCHOOLS
+                        </div>
+
+                        <h2>
+                            Looking for School
+                            Bulk Requirements?
+                        </h2>
+
+                        <p>
+
+                            Contact DHV Books &
+                            Accessories to discuss
+                            books, uniforms, stationery
+                            and other school requirements.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-yellow"
+                    >
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Contact Us
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             HOW IT WORKS
+             ================================================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-kicker">
+                        EASY PROCESS
+                    </div>
+
+                    <h2 class="section-title">
+                        Get What You Need
+                    </h2>
+
+                    <p class="section-description">
+
+                        Browse, enquire and organise
+                        your school essentials with ease.
+
+                    </p>
+
+                </div>
+
+
+                <div class="steps-grid">
+
+
+                    <div class="step-card reveal">
+
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <div class="step-icon">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                        </div>
+
+                        <h3>
+                            Browse
+                        </h3>
+
+                        <p>
+
+                            Explore books, uniforms,
+                            stationery and accessories
+                            through our website.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card reveal">
+
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <div class="step-icon">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                        </div>
+
+                        <h3>
+                            Enquire
+                        </h3>
+
+                        <p>
+
+                            Send a quick WhatsApp enquiry
+                            about products, prices or
+                            availability.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card reveal">
+
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <div class="step-icon">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </div>
+
+                        <h3>
+                            Organise
+                        </h3>
+
+                        <p>
+
+                            Discuss your requirements
+                            and arrange your school
+                            essentials.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FEATURED PRODUCTS
+             ================================================= -->
+
+        <section class="section section-dark">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-kicker">
+                        POPULAR ESSENTIALS
+                    </div>
+
+                    <h2 class="section-title">
+                        School Basics
+                    </h2>
+
+                    <p class="section-description">
+
+                        A few of the everyday products
+                        students commonly need.
+
+                    </p>
+
+                </div>
+
+
+                <div class="product-grid">
+
+
+                    <article
+                        class="product-card reveal"
+                        data-category="books"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=800&q=80"
+                                alt="School notebook"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                School Notebooks
+                            </h3>
+
+                            <p>
+                                Everyday notebooks for
+                                classwork and homework.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('School Notebooks')"
+                            >
+
+                                Enquire
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="product-card reveal"
+                        data-category="stationery"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=800&q=80"
+                                alt="Pens and stationery"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                Writing Essentials
+                            </h3>
+
+                            <p>
+                                Pens, pencils and everyday
+                                classroom writing supplies.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('Writing Essentials')"
+                            >
+
+                                Enquire
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="product-card reveal"
+                        data-category="uniforms"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1622445275576-721325763afe?auto=format&fit=crop&w=800&q=80"
+                                alt="School shirt"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                School Uniforms
+                            </h3>
+
+                            <p>
+                                Shirts, trousers, skirts
+                                and uniform essentials.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('School Uniforms')"
+                            >
+
+                                Enquire
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="product-card reveal"
+                        data-category="accessories"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+                                alt="School backpack"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <h3>
+                                School Bags
+                            </h3>
+
+                            <p>
+                                Practical bags for books,
+                                stationery and daily school use.
+                            </p>
+
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                onclick="enquireProduct('School Bags')"
+                            >
+
+                                Enquire
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div
+                    class="text-center"
+                    style="margin-top:35px;"
+                >
+
+                    <a
+                        href="products.html"
+                        class="btn btn-outline"
+                    >
+
+                        View All Products
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+             ================================================= -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div class="cta-content">
+
+                        <div class="section-kicker">
+                            DHV BOOKS & ACCESSORIES
+                        </div>
+
+                        <h2>
+                            Ready For The
+                            School Year?
+                        </h2>
+
+                        <p>
+
+                            Tell us what you need and
+                            we'll help you with your
+                            school essentials.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="cta-buttons">
+
+                        <a
+                            href="products.html"
+                            class="btn btn-white"
+                        >
+
+                            Browse Products
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-yellow"
+                            onclick="openWhatsApp(
+                                'Hello DHV Books & Accessories, I would like to enquire about school essentials.'
+                            )"
+                        >
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                            WhatsApp Us
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="logo"
+                    >
+
+                        <span class="logo-icon">
+
+                            <i class="fa-solid fa-book-open"></i>
+
+                        </span>
+
+                        <span class="logo-text">
+                            DHV <span>Books</span>
+                        </span>
+
+                    </a>
+
+
+                    <p>
+
+                        Your convenient destination
+                        for school books, uniforms,
+                        stationery and accessories.
+
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a
+                            href="https://wa.me/919347592976"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="WhatsApp"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                        <a
+                            href="mailto:dileep.976@gmail.com"
+                            aria-label="Email"
+                        >
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+
+                        <a
+                            href="tel:9347592976"
+                            aria-label="Phone"
+                        >
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <div class="footer-title">
+                        Quick Links
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="index.html">
+                            Home
+                        </a>
+
+                        <a href="products.html">
+                            Products
+                        </a>
+
+                        <a href="books.html">
+                            Books
+                        </a>
+
+                        <a href="uniforms.html">
+                            Uniforms
+                        </a>
+
+                        <a href="stationery.html">
+                            Stationery
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMPANY -->
+
+                <div>
+
+                    <div class="footer-title">
+                        Explore
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="schools.html">
+                            Schools
+                        </a>
+
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+
+                        <a href="about.html">
+                            About Us
+                        </a>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div>
+
+                    <div class="footer-title">
+                        Contact
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="tel:9347592976">
+                            93475 92976
+                        </a>
+
+                        <a href="mailto:dileep.976@gmail.com">
+                            dileep.976@gmail.com
+                        </a>
+
+                        <span style="color:#999;font-size:13px;">
+                            Beside SaiBalaji Theatre,
+                            Eluru - 534001
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                ©
+                <span id="currentYear">
+                    2026
+                </span>
+
+                DHV Books & Accessories.
+                All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         FLOATING WHATSAPP
+         ===================================================== -->
+
+    <a
+        href="https://wa.me/919347592976"
+        target="_blank"
+        rel="noopener"
+        class="whatsapp-float"
+        aria-label="Chat with DHV Books & Accessories on WhatsApp"
+        title="WhatsApp DHV Books & Accessories"
+    >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

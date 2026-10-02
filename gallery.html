@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore DHV Books & Accessories gallery featuring books, uniforms, stationery and school essentials in Eluru."
+    >
+
+    <meta
+        name="theme-color"
+        content="#050505"
+    >
+
+    <title>Gallery | DHV Books & Accessories</title>
+
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
+
+    <!-- Prevent theme flash -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem("dhv-theme");
+
+            if (savedTheme === "light") {
+                document.documentElement.classList.add("light-mode");
+            }
+        })();
+    </script>
+
+
+    <style>
+
+        /* =========================================
+           GALLERY
+        ========================================= */
+
+        .gallery-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 35px 0 45px;
+        }
+
+        .gallery-filter-btn {
+            border: 1px solid rgba(255, 196, 0, 0.3);
+            background: transparent;
+            color: inherit;
+            padding: 11px 22px;
+            border-radius: 999px;
+            cursor: pointer;
+            font: inherit;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-filter-btn:hover,
+        .gallery-filter-btn.active {
+            background: #ffc400;
+            color: #050505;
+            border-color: #ffc400;
+            transform: translateY(-2px);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            border-radius: 18px;
+            background: #111;
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+            min-height: 580px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item.large img {
+            min-height: 580px;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 55px 22px 22px;
+            background: linear-gradient(
+                transparent,
+                rgba(0, 0, 0, 0.94)
+            );
+            color: #fff;
+        }
+
+        .gallery-overlay span {
+            display: inline-block;
+            margin-bottom: 7px;
+            color: #ffc400;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .gallery-overlay h3 {
+            margin: 0;
+            font-size: 21px;
+        }
+
+        .gallery-intro {
+            max-width: 760px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .gallery-feature {
+            padding-top: 0;
+        }
+
+        .gallery-empty {
+            display: none;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .gallery-empty i {
+            font-size: 45px;
+            color: #ffc400;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 1000px) {
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+                min-height: 430px;
+            }
+
+            .gallery-item.large img {
+                min-height: 430px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item,
+            .gallery-item.large {
+                grid-column: span 1;
+                grid-row: span 1;
+                min-height: 280px;
+            }
+
+            .gallery-item.large img {
+                min-height: 280px;
+            }
+
+            .gallery-filters {
+                justify-content: flex-start;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 8px;
+            }
+
+            .gallery-filter-btn {
+                flex-shrink: 0;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         TOP BAR
+    ========================================= -->
+
+    <div class="top-bar">
+
+        <div class="container top-bar-inner">
+
+            <div class="top-bar-left">
+
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Eluru, Andhra Pradesh
+                </span>
+
+                <a href="tel:9347592976">
+                    <i class="fa-solid fa-phone"></i>
+                    93475 92976
+                </a>
+
+            </div>
+
+
+            <div class="top-bar-right">
+
+                <span>
+                    <i class="fa-solid fa-star"></i>
+                    School Essentials Under One Roof
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </span>
+
+                <span class="logo-text">
+                    DHV <span>Books</span>
+                </span>
+
+            </a>
+
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="books.html">
+                    Books
+                </a>
+
+                <a href="uniforms.html">
+                    Uniforms
+                </a>
+
+                <a href="stationery.html">
+                    Stationery
+                </a>
+
+                <a href="schools.html">
+                    Schools
+                </a>
+
+                <a
+                    href="gallery.html"
+                    class="active"
+                >
+                    Gallery
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+
+            <!-- ACTIONS -->
+
+            <div
+                style="
+                    display:flex;
+                    align-items:center;
+                    gap:8px;
+                "
+            >
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Toggle dark and light mode"
+                    title="Toggle dark and light mode"
+                >
+                    🌙
+                </button>
+
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         PAGE HERO
+    ========================================= -->
+
+    <section class="page-hero">
+
+        <div class="container">
+
+            <div class="page-hero-content">
+
+                <div class="section-kicker">
+                    DHV GALLERY
+                </div>
+
+
+                <h1>
+                    A Look Inside
+                    <span>DHV Books & Accessories</span>
+                </h1>
+
+
+                <p>
+                    Explore books, school uniforms,
+                    stationery and everyday school
+                    essentials.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         INTRO
+    ========================================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="gallery-intro">
+
+                <div class="section-kicker">
+                    EXPLORE
+                </div>
+
+
+                <h2 class="section-title">
+                    School Essentials
+                    In One Place
+                </h2>
+
+
+                <p class="section-description">
+                    Browse our gallery and explore
+                    the different categories available
+                    at DHV Books & Accessories.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MAIN GALLERY
+    ========================================= -->
+
+    <section class="section gallery-feature">
+
+        <div class="container">
+
+            <div class="gallery-grid">
+
+
+                <!-- BOOKS -->
+
+                <div
+                    class="gallery-item large reveal"
+                    data-gallery-category="books"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1400&q=85"
+                        alt="Books collection"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Books
+                        </span>
+
+                        <h3>
+                            Books & Study Materials
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- UNIFORMS -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="uniforms"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1000&q=85"
+                        alt="School supplies"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Uniforms
+                        </span>
+
+                        <h3>
+                            School Essentials
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STATIONERY -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="stationery"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=1000&q=85"
+                        alt="Stationery products"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Stationery
+                        </span>
+
+                        <h3>
+                            Writing & Art Supplies
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SCHOOL -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="school"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85"
+                        alt="School classroom"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            School
+                        </span>
+
+                        <h3>
+                            Supporting Schools
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- NOTEBOOKS -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="stationery"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1000&q=85"
+                        alt="Notebooks and stationery"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Stationery
+                        </span>
+
+                        <h3>
+                            Notebooks & Essentials
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LEARNING -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="books"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1000&q=85"
+                        alt="Open book"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Books
+                        </span>
+
+                        <h3>
+                            Learning Materials
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SCHOOL -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="school"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1000&q=85"
+                        alt="School building"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            School
+                        </span>
+
+                        <h3>
+                            School Requirements
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- WRITING -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="stationery"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=1000&q=85"
+                        alt="Pens and stationery"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Stationery
+                        </span>
+
+                        <h3>
+                            Writing Essentials
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STUDENTS -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="uniforms"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1000&q=85"
+                        alt="Students at school"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Uniforms
+                        </span>
+
+                        <h3>
+                            School Life
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FILTER SECTION
+    ========================================= -->
+
+    <section class="section section-alt">
+
+        <div class="container">
+
+
+            <div class="section-header">
+
+                <div class="section-kicker">
+                    BROWSE BY CATEGORY
+                </div>
+
+
+                <h2 class="section-title">
+                    Explore The Collection
+                </h2>
+
+
+                <p class="section-description">
+                    Select a category to filter
+                    the gallery.
+                </p>
+
+            </div>
+
+
+
+            <!-- FILTER BUTTONS -->
+
+            <div class="gallery-filters">
+
+                <button
+                    type="button"
+                    class="gallery-filter-btn active"
+                    onclick="filterGallery('all', this)"
+                >
+                    All
+                </button>
+
+
+                <button
+                    type="button"
+                    class="gallery-filter-btn"
+                    onclick="filterGallery('books', this)"
+                >
+
+                    <i class="fa-solid fa-book"></i>
+
+                    Books
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="gallery-filter-btn"
+                    onclick="filterGallery('uniforms', this)"
+                >
+
+                    <i class="fa-solid fa-shirt"></i>
+
+                    Uniforms
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="gallery-filter-btn"
+                    onclick="filterGallery('stationery', this)"
+                >
+
+                    <i class="fa-solid fa-pencil"></i>
+
+                    Stationery
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="gallery-filter-btn"
+                    onclick="filterGallery('school', this)"
+                >
+
+                    <i class="fa-solid fa-school"></i>
+
+                    School
+
+                </button>
+
+            </div>
+
+
+
+            <!-- FILTERABLE GALLERY -->
+
+            <div
+                class="gallery-grid"
+                id="filterGalleryGrid"
+            >
+
+
+                <!-- BOOK -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="books"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1000&q=85"
+                        alt="Book collection"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Books
+                        </span>
+
+                        <h3>
+                            Book Collection
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STATIONERY -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="stationery"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=85"
+                        alt="School stationery"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Stationery
+                        </span>
+
+                        <h3>
+                            School Stationery
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- UNIFORMS -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="uniforms"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600087626014-e652e18bbff4?auto=format&fit=crop&w=1000&q=85"
+                        alt="School students"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Uniforms
+                        </span>
+
+                        <h3>
+                            School Uniforms
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SCHOOL -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="school"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=85"
+                        alt="Students in classroom"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            School
+                        </span>
+
+                        <h3>
+                            School Community
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BOOK -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="books"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1000&q=85"
+                        alt="Stack of books"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Books
+                        </span>
+
+                        <h3>
+                            Reading Materials
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STATIONERY -->
+
+                <div
+                    class="gallery-item reveal"
+                    data-gallery-category="stationery"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85"
+                        alt="Writing stationery"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Stationery
+                        </span>
+
+                        <h3>
+                            Writing Supplies
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EMPTY -->
+
+            <div
+                class="gallery-empty"
+                id="galleryEmpty"
+            >
+
+                <i class="fa-solid fa-images"></i>
+
+
+                <h3>
+                    No Images Found
+                </h3>
+
+
+                <p>
+                    Try another category.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         EXPLORE MORE
+    ========================================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="two-column">
+
+
+                <div class="content-block reveal">
+
+                    <div class="section-kicker">
+                        EXPLORE MORE
+                    </div>
+
+
+                    <h2 class="section-title">
+                        Looking For
+                        Something Specific?
+                    </h2>
+
+
+                    <p>
+                        Browse our complete product
+                        categories or contact us directly
+                        for a specific requirement.
+                    </p>
+
+
+                    <div class="cta-buttons">
+
+                        <a
+                            href="products.html"
+                            class="btn btn-primary"
+                        >
+
+                            View Products
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-outline"
+                            onclick="openWhatsApp(
+                                'Hello DHV Books & Accessories, I saw your gallery and would like to enquire about a product.'
+                            )"
+                        >
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                            Enquire Now
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="image-card reveal">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85"
+                        alt="Student studying with school supplies"
+                        loading="lazy"
+                    >
+
+
+                    <div class="image-card-overlay">
+
+                        <strong>
+                            School Essentials
+                        </strong>
+
+
+                        <span>
+                            Books • Uniforms • Stationery
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SCHOOL CTA
+    ========================================= -->
+
+    <section class="cta-section">
+
+        <div class="container">
+
+            <div class="cta-box">
+
+
+                <div class="cta-content">
+
+                    <div class="section-kicker">
+                        FOR SCHOOLS
+                    </div>
+
+
+                    <h2>
+                        Need School Supplies
+                        In Bulk?
+                    </h2>
+
+
+                    <p>
+                        Talk to DHV Books & Accessories
+                        about school books, uniforms,
+                        stationery and other requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="cta-buttons">
+
+                    <a
+                        href="schools.html"
+                        class="btn btn-yellow"
+                    >
+
+                        School Services
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-white"
+                        onclick="openWhatsApp(
+                            'Hello DHV Books & Accessories, I am enquiring about bulk school requirements.'
+                        )"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        Bulk Enquiry
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="logo"
+                    >
+
+                        <span class="logo-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </span>
+
+                        <span class="logo-text">
+                            DHV <span>Books</span>
+                        </span>
+
+                    </a>
+
+
+                    <p>
+                        Your convenient destination
+                        for school books, uniforms,
+                        stationery and accessories.
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a
+                            href="https://wa.me/919347592976"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="WhatsApp"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+
+                        <a
+                            href="mailto:dileep.976@gmail.com"
+                            aria-label="Email"
+                        >
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+
+
+                        <a
+                            href="tel:9347592976"
+                            aria-label="Phone"
+                        >
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCTS -->
+
+                <div>
+
+                    <div class="footer-title">
+                        Products
+                    </div>
+
+
+                    <div class="footer-links">
+
+                        <a href="books.html">
+                            Books
+                        </a>
+
+                        <a href="uniforms.html">
+                            Uniforms
+                        </a>
+
+                        <a href="stationery.html">
+                            Stationery
+                        </a>
+
+                        <a href="products.html">
+                            Accessories
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EXPLORE -->
+
+                <div>
+
+                    <div class="footer-title">
+                        Explore
+                    </div>
+
+
+                    <div class="footer-links">
+
+                        <a href="schools.html">
+                            Schools
+                        </a>
+
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+
+                        <a href="about.html">
+                            About Us
+                        </a>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <div>
+
+                    <div class="footer-title">
+                        Contact
+                    </div>
+
+
+                    <div class="footer-links">
+
+                        <a href="tel:9347592976">
+                            93475 92976
+                        </a>
+
+
+                        <a href="mailto:dileep.976@gmail.com">
+                            dileep.976@gmail.com
+                        </a>
+
+
+                        <span
+                            style="
+                                color:#999;
+                                font-size:13px;
+                            "
+                        >
+                            Beside SaiBalaji Theatre,
+                            Eluru - 534001
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                ©
+                <span id="currentYear">
+                    2026
+                </span>
+
+                DHV Books & Accessories.
+                All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         FLOATING WHATSAPP
+    ========================================= -->
+
+    <a
+        href="https://wa.me/919347592976"
+        target="_blank"
+        rel="noopener"
+        class="whatsapp-float"
+        aria-label="WhatsApp DHV Books & Accessories"
+        title="WhatsApp"
+    >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+
+    <!-- =========================================
+         GALLERY FILTER JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+        function filterGallery(category, button) {
+
+            const items =
+                document.querySelectorAll(
+                    "#filterGalleryGrid .gallery-item"
+                );
+
+            const buttons =
+                document.querySelectorAll(
+                    ".gallery-filter-btn"
+                );
+
+            const emptyState =
+                document.getElementById(
+                    "galleryEmpty"
+                );
+
+
+            buttons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+
+
+            button.classList.add("active");
+
+
+            let visibleCount = 0;
+
+
+            items.forEach(function (item) {
+
+                const itemCategory =
+                    item.dataset.galleryCategory;
+
+
+                const shouldShow =
+                    category === "all" ||
+                    itemCategory === category;
+
+
+                if (shouldShow) {
+
+                    item.style.display = "block";
+                    visibleCount++;
+
+
+                    setTimeout(function () {
+
+                        item.style.opacity = "1";
+                        item.style.transform =
+                            "translateY(0)";
+
+                    }, 20);
+
+                } else {
+
+                    item.style.opacity = "0";
+                    item.style.transform =
+                        "translateY(10px)";
+
+
+                    setTimeout(function () {
+
+                        item.style.display = "none";
+
+                    }, 250);
+
+                }
+
+            });
+
+
+            if (emptyState) {
+
+                emptyState.style.display =
+                    visibleCount === 0
+                        ? "block"
+                        : "none";
+
+            }
+
+        }
+
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                document
+                    .querySelectorAll(".gallery-item")
+                    .forEach(function (item) {
+
+                        item.style.opacity = "1";
+
+                    });
+
+            }
+        );
+
+    </script>
+
+
+
+    <!-- MAIN JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
